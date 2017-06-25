@@ -1,0 +1,26 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+# Startseite
+- url: /$
+  static_files: http_root/index.html
+  upload: http_root/index.html
+
+# Ordner mit Slash
+- url: /(.*?)/$
+  static_files: http_root/\1/index.html
+  upload: http_root/(.*?)/index.html
+
+# Sonstige statische Dateien
+- url: /(.*?\.(gif|jpg|png|jpeg|js|css|ico|html|htm)$)
+  static_files: http_root/\1
+  upload: http_root/(.*?\.(gif|jpg|png|jpeg|js|css|ico|html|htm)$)
+
+skip_files:
+- ^(.*/)?_.*$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?\..*$
