@@ -18,7 +18,7 @@ args = [
     "--project", PROJECTNAME,
     "--version", PROJECTVERSION,
     "--quiet",
-    # "--verbosity", "info",
+    "--verbosity", "info",
     "app.yaml"
 ]
 
