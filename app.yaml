@@ -21,7 +21,6 @@ handlers:
   upload: http_root/(.*?\.(gif|jpg|png|jpeg|js|css|ico|html|htm)$)
 
 skip_files:
-- ^(.*/)?_.*$
 - ^(.*/)?.*~$
 - ^(.*/)?.*\.py[co]$
 - ^(.*/)?\..*$
